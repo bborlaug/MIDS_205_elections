@@ -14,6 +14,8 @@ except:
 cur = conn.cursor()
 
 cur.execute('commit')
+drop_db = """DROP DATABASE elections;"""
+cur.execute(drop_db)
 create_db = """CREATE DATABASE elections;"""
 cur.execute(create_db)
 
