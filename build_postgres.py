@@ -14,8 +14,6 @@ except:
 cur = conn.cursor()
 
 cur.execute('commit')
-drop_db = """DROP DATABASE elections"""
-cur.execute(drop_db)
 create_db = """CREATE DATABASE elections;"""
 cur.execute(create_db)
 
@@ -26,7 +24,7 @@ conn.close()
 
 #Connect to elections db
 try:
-    conn = psycopg2.connect(dbname='elections')#, user=username, password=password)
+    conn = psycopg2.connect(dbname='elections', user=username, password=password)
 except:
     print "Unable to connect to elections database"
 
