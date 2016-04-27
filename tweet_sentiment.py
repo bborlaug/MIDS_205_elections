@@ -116,14 +116,12 @@ while True:
     ##Prevents making two many sentiment requests
     fmt = '%Y-%m-%d %H:%M:%S'
     now_utc = datetime.now(timezone('UTC'))
-    start = str(datetime.time(12,0,0,0))
-    end = str(datetime.time(24,0,0,0))
     now_pacific = now_utc.astimezone(timezone('US/Pacific'))
     pacific_time = now_pacific.strftime(fmt)
     pacific_time = pacific_time.split(' ')[1]
     
     
-    if start > pacific_time:
+    if '12:00:00' > pacific_time:
         print '\n'
         print 'Sleeping...Zzz..'
         print '\n'
