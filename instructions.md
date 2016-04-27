@@ -16,7 +16,7 @@
 7) Open a live PostgreSQL connection in Tableau desktop with the following connection details:
 
 Tableau-PostgreSQL Connection Details:
----------------------------------------
+
 Server: (Server where your postgreSQL db lives)
 Port: 5432
 Database: elections
@@ -24,7 +24,6 @@ Database: elections
 Authentication: "Username and Password"
 Username: postgres
 Password: postgres
----------------------------------------
 
 You should now have a streamlined flow of new twitter data for your Tableau dashboards. You must add election results as they come in separately & run the google_trends_dem.py & google_trends_gop.py scripts anytime you want to obtain a new weeks worth of search traffic data for a given state. Have fun! For reference, here's a look at the dashboard I created: __________________
 
