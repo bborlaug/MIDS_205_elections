@@ -4,7 +4,7 @@
 import psycopg2
 
 username = 'postgres' #Enter postgres username
-password = 'N1!dakota' #Enter postgres password
+password = 'postgres' #Enter postgres password
 
 try:
     conn = psycopg2.connect(dbname='postgres', user=username, password=password)
