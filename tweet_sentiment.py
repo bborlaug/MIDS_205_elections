@@ -105,7 +105,7 @@ while True:
         now_utc = datetime.now(timezone('UTC'))
         now_pacific = now_utc.astimezone(timezone('US/Pacific'))
         pacific_date = now_pacific.strftime(fmt)
-        pacific_date = pacific_time.split(' ')[0]
+        pacific_date = pacific_date.split(' ')[0]
         pacific_time = now_pacific.strftime(fmt)
         pacific_time = pacific_time.split(' ')[1]
         insert_query = """INSERT INTO data.twitter
