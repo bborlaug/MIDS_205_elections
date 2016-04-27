@@ -4,11 +4,18 @@
 
 import twitter
 import time
-import datetime
+import datetime import datetime
 import psycopg2
 import json
 import requests
+from pytz import timezone
+import pytz
 
+##Set time zone
+utc = pytz.utc
+eastern = timezone('US/Eastern')
+
+##Twitter credentials
 CONSUMER_KEY = 'AXD3EVRg3lzv4HSgfFWG0J3xu'
 CONSUMER_SECRET ='zYhiMAJt7UcxZE5rajC21Sht6TrCSOMztsmHToBao3DSEwYDdR'
 OAUTH_TOKEN = '489638771-bzrAYhcwGFPnvBn4y1Th93YGX9YpVzfUZ46F9daK'
@@ -98,7 +105,7 @@ while True:
         print 'Inserting results into postgres db'
         print '\n'
     
-        dt = datetime.datetime.now()
+        dt = datetime.now()
         dt = dt.replace(microsecond=0)
         date = dt.date()
         tm = dt.time()
@@ -109,9 +116,12 @@ while True:
         cur.close()
         conn.close()
             
-    ##Stop for 12 hrs if it's after 10 PM MST
+    ##Stop for 12 hrs @ 2 AM EST
     ##Prevents making two many sentiment requests
-    if datetime.datetime.now().time() > datetime.time(22,0,0,0):
+    start = eastern.localize(datetime.time(14,0,0,0))
+    end = eastern.localize(datetime.time(2,0,0,0))
+    
+    if start > datetime.now().time() and datetime.now().time() > end:
         print '\n'
         print 'Sleeping...Zzz..'
         print '\n'
