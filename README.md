@@ -14,6 +14,6 @@ In this project, I aim to use internet & social media data to generate a real-ti
 
 Output:
 
-The live dashboard is available to view here:
+The live dashboard is available to view here: ___________________
 
 **To recreate this project, follow the "Instructions" document that I've included.
