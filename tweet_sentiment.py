@@ -112,11 +112,11 @@ while True:
         cur.close()
         conn.close()
             
-    ##Stop for 12 hrs @ 2 AM EST
+    ##Stop for 12 hrs 12 AM PST
     ##Prevents making two many sentiment requests
     fmt = '%Y-%m-%d %H:%M:%S'
     now_utc = datetime.now(timezone('UTC'))
-    start = eastern.localize(datetime.time(12,0,0,0))
+    start = str(datetime.time(12,0,0,0))
     end = str(datetime.time(24,0,0,0))
     now_pacific = now_utc.astimezone(timezone('US/Pacific'))
     pacific_time = now_pacific.strftime(fmt)
