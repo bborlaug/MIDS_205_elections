@@ -3,7 +3,6 @@
 #& dumps it into a PostgreSQL database
 
 #Run script on night of election & specify states variable
-
 from pytrends.pyGTrends import pyGTrends
 import time
 import datetime as dt
@@ -12,9 +11,9 @@ import os
 import psycopg2
 
 #Insert Google info 
-google_username = "borlaug13@gmail.com"
-google_password = "N1!dakota"
-path = "C:\Users\Brennan\Desktop\w205_data\google_traffic"
+google_username = "" #Enter google username
+google_password = "" #Enter google password
+path = "/Data/MIDS_205_elections"
 #Change path ^ to wherever you feel comportable temporarily storing files
 
 os.chdir(path)
@@ -24,7 +23,7 @@ states = ["US-PA", "US-CT", "US-DE", "US-MD", "US-RI"] #enter states or string o
 
 #Insert postgres info
 postgres_username = 'postgres' #Enter postgres username
-postgres_password = 'N1!dakota' #Enter postgres password
+postgres_password = 'postgres' #Enter postgres password
 
 for state in states:
     connector = pyGTrends(google_username, google_password)
@@ -70,9 +69,9 @@ for state in states:
         split1 = split1[0]
         split2 = split1.split('-')
         date = '-'.join(split2[:3])
-        time = '-'.join(split2[3:])
+        tm = '-'.join(split2[3:])
         dates.append(date)
-        times.append(time)
+        times.append(tm)
     df['date'] = dates
     df['time'] = times
     df = df.drop('Time', 1)
