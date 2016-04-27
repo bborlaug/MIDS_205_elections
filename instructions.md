@@ -1,2 +1,3 @@
-Step-by-Step Guide for replicating this project yourself:
+#Step-by-Step Instructions
+...for replicating this project yourself:
 
