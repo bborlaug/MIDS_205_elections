@@ -23,7 +23,7 @@ url = 'http://text-processing.com/api/sentiment/'
 
 #Insert postgres info
 postgres_username = 'postgres' #Enter postgres username
-postgres_password = 'N1!dakota' #Enter postgres password
+postgres_password = 'postgres' #Enter postgres password
         
 # Query terms
 q = ['Trump', 'Cruz', 'Kasich', 'Hillary, Clinton', 'Bernie, Bern']
