@@ -4,7 +4,7 @@
 
 import twitter
 import time
-import datetime import datetime
+from datetime import datetime
 import psycopg2
 import json
 import requests
