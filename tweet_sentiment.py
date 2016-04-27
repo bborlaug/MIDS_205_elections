@@ -11,10 +11,6 @@ import requests
 from pytz import timezone
 import pytz
 
-##Set time zone
-utc = pytz.utc
-eastern = timezone('US/Eastern')
-
 ##Twitter credentials
 CONSUMER_KEY = 'AXD3EVRg3lzv4HSgfFWG0J3xu'
 CONSUMER_SECRET ='zYhiMAJt7UcxZE5rajC21Sht6TrCSOMztsmHToBao3DSEwYDdR'
@@ -118,10 +114,16 @@ while True:
             
     ##Stop for 12 hrs @ 2 AM EST
     ##Prevents making two many sentiment requests
-    start = eastern.localize(datetime.time(14,0,0,0))
-    end = eastern.localize(datetime.time(2,0,0,0))
+    fmt = '%Y-%m-%d %H:%M:%S'
+    now_utc = datetime.now(timezone('UTC'))
+    start = eastern.localize(datetime.time(12,0,0,0))
+    end = str(datetime.time(24,0,0,0))
+    now_pacific = now_utc.astimezone(timezone('US/Pacific'))
+    pacific_time = now_pacific.strftime(fmt)
+    pacific_time = pacific_time.split(' ')[1]
     
-    if start > datetime.now().time() and datetime.now().time() > end:
+    
+    if start > pacific_time:
         print '\n'
         print 'Sleeping...Zzz..'
         print '\n'
