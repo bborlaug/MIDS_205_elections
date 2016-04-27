@@ -61,9 +61,9 @@ for state in states:
         split1 = split1[0]
         split2 = split1.split('-')
         date = '-'.join(split2[:3])
-        time = '-'.join(split2[3:])
+        tm = '-'.join(split2[3:])
         dates.append(date)
-        times.append(time)
+        times.append(tm)
     df['date'] = dates
     df['time'] = times
     df = df.drop('Time', 1)
