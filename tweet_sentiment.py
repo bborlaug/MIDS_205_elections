@@ -100,13 +100,16 @@ while True:
         print '\n'
         print 'Inserting results into postgres db'
         print '\n'
-    
-        dt = datetime.now()
-        dt = dt.replace(microsecond=0)
-        date = dt.date()
-        tm = dt.time()
+        
+        fmt = '%Y-%m-%d %H:%M:%S'
+        now_utc = datetime.now(timezone('UTC'))
+        now_pacific = now_utc.astimezone(timezone('US/Pacific'))
+        pacific_date = now_pacific.strftime(fmt)
+        pacific_date = pacific_time.split(' ')[0]
+        pacific_time = now_pacific.strftime(fmt)
+        pacific_time = pacific_time.split(' ')[1]
         insert_query = """INSERT INTO data.twitter
-                          VALUES ('%s','%s','%s','%s',%f,%d,%d,%d);""" %(str(date),str(tm),lowcand,party,float(rate),int(pos),int(neg),int(neut))
+                          VALUES ('%s','%s','%s','%s',%f,%d,%d,%d);""" %(str(pacific_date),str(pacific_time),lowcand,party,float(rate),int(pos),int(neg),int(neut))
         
         cur.execute(insert_query)
         cur.close()
@@ -114,7 +117,6 @@ while True:
             
     ##Stop for 12 hrs 12 AM PST
     ##Prevents making two many sentiment requests
-    fmt = '%Y-%m-%d %H:%M:%S'
     now_utc = datetime.now(timezone('UTC'))
     now_pacific = now_utc.astimezone(timezone('US/Pacific'))
     pacific_time = now_pacific.strftime(fmt)
