@@ -7,7 +7,7 @@
 
 3) Run build.postgres.py -> This will build out the "elections" database in PostgresSQL (Note: If you lack some of the python libraries used in this or other scripts, install them separately with 'pip' or from your browser.
 
-4) Run _________ -> This will load the previous data that I have collected into the 'elections' database (election results & google traffic only; Twitter data not included due to its dynamic nature).
+4) Run load_data.sql (from MIDS_205_elections/data) -> This will load the previous data that I have collected into the 'elections' database (election results & google traffic only; Twitter data not included due to its dynamic nature).
 
 5) Run tweet_sentiment.py -> Script that connects to Twitter's public streaming API & collects 16 tweets/candidate/hr from 12 pm PST -> 12 am PST to measure "mention rate" & tweet sentiment statistics. Results are stored in 'elections' database. This script runs continuously & should be left on in the background.
 
