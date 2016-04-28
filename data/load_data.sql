@@ -1,3 +1,2 @@
-\cd /data/MIDS_205_elections/data
-COPY data.results FROM 'election_results.csv' CSV HEADER;
-COPY data.google FROM 'google_traffic.csv' CSV HEADER;
+COPY data.results FROM '/data/MIDS_205_elections/data/election_results.csv' CSV HEADER; -- Switch to your directory
+COPY data.google FROM '/data/MIDS_205_elections/data/google_traffic.csv' CSV HEADER; -- Switch to your directory
