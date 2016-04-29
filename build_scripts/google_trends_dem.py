@@ -22,8 +22,8 @@ dem = "Hillary Clinton, Bernie Sanders"
 states = ["US-PA", "US-CT", "US-DE", "US-MD", "US-RI"] #enter states or string of states
 
 #Insert postgres info
-postgres_username = 'postgres'
-postgres_password = 'postgres'
+postgres_username = 'postgres' #Enter postgres username
+postgres_password = 'postgres' #Enter postgres password
 
 for state in states:
     connector = pyGTrends(google_username, google_password)
