@@ -22,7 +22,7 @@ Port: 5432
 Database: elections  
   
 Authentication: "Username and Password"  
-Username: postgres (or whatever your username is) 
+Username: postgres (or whatever your username is)  
 Password: postgres (or whatever your password is)
   
 You should now have a streamlined flow of new twitter data for your Tableau workbooks. You must add election results as they come in separately by running the google_trends_dem.py & google_trends_gop.py scripts anytime you want to obtain a new week's worth of search traffic data for a given state. Have fun! For reference, here's a snapshot of some of the workbooks I created (up to date as of 4/28/16):
