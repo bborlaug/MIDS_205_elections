@@ -14,6 +14,4 @@ In this project, I aim to use internet & social media data to generate a real-ti
 
 Output:
 
-A sample workbook (w/ data to date as of 4/28/2016) is available to view here: 
-
-**To recreate this project, follow the "Instructions" document included in the "build_scripts" folder.
+A sample workbook is available in this repo (elections.tbw). Connect to a postgres data source & recreate the project by following the instructions in the "build_scripts" folder. 
