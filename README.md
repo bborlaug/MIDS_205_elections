@@ -16,4 +16,4 @@ Output:
 
 A sample workbook (w/ data to date as of 4/28/2016) is available to view here: 
 
-**To recreate this project, follow the "Instructions" document that I've included in the "build_scripts" folder.
+**To recreate this project, follow the "Instructions" document included in the "build_scripts" folder.
