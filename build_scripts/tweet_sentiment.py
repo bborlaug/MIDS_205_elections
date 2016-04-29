@@ -11,11 +11,11 @@ import requests
 from pytz import timezone
 import pytz
 
-##Twitter credentials
-CONSUMER_KEY = 'AXD3EVRg3lzv4HSgfFWG0J3xu'
-CONSUMER_SECRET ='zYhiMAJt7UcxZE5rajC21Sht6TrCSOMztsmHToBao3DSEwYDdR'
-OAUTH_TOKEN = '489638771-bzrAYhcwGFPnvBn4y1Th93YGX9YpVzfUZ46F9daK'
-OAUTH_TOKEN_SECRET = 'ItTer5KHed5R6dHrNPaZkoN8AvLkQQ8Bvp0Agn6G89gR3'
+##Twitter credentials - Enter your own
+CONSUMER_KEY = 'Insert consumer key here'
+CONSUMER_SECRET ='Insert consumer secret here'
+OAUTH_TOKEN = 'Insert Oauth token here'
+OAUTH_TOKEN_SECRET = 'Insert token secret here'
 
 auth = twitter.oauth.OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET,
                            CONSUMER_KEY, CONSUMER_SECRET)
