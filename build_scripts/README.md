@@ -5,7 +5,7 @@
   
 2) Install Python 2.7 (https://www.python.org/downloads/)
   
-3) Run build.postgres.py -> This will build out the "elections" database in PostgresSQL (Note: If you lack some of the python libraries used in this or other scripts, install them separately with 'pip' or from your browser).
+3) Run build.postgres.py -> This will build out the "elections" database in PostgresSQL (Note: If you lack some of the python libraries used in this or other scripts, install them separately with 'pip' or from your browser).**You may need to alter this script with your own postgres username/password combination if it's not 'postgres'/'postgres'.** 
   
 4) Run load_data.sql (from MIDS_205_elections/data) -> This will load the previous data that I have collected into the 'elections' database (election results & google traffic only; Twitter data not included due to its dynamic nature).
   
