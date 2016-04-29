@@ -83,7 +83,7 @@ for state in states:
     cur.execute('commit')
     
     print '\n'
-    print 'Inserting results into postgres db'
+    print 'Inserting results into postgres db...'
     
     for i,j,k,l,m,n in zip(df['date'], df['time'], df['state'], df['candidate'], df['party'], df['traffic']):
         insert_query = """INSERT INTO data.google
@@ -91,5 +91,8 @@ for state in states:
         cur.execute(insert_query)
     cur.close()
     conn.close()
+    
+print '\n'
+print 'Request Complete!'
     
     
