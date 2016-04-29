@@ -13,7 +13,7 @@ import psycopg2
 #Insert Google info 
 google_username = "" #Enter google username
 google_password = "" #Enter google password
-path = "C:\Users\Brennan\Desktop\w205_data\google_traffic"
+path = "/Data/MIDS_205_elections"
 #Change path ^ to wherever you feel comportable temporarily storing files
 
 os.chdir(path)
