@@ -14,8 +14,8 @@ except:
 cur = conn.cursor()
 
 cur.execute('commit')
-drop_db = """DROP DATABASE elections;"""
-cur.execute(drop_db)
+#drop_db = """DROP DATABASE elections;"""
+#cur.execute(drop_db)
 create_db = """CREATE DATABASE elections;"""
 cur.execute(create_db)
 
@@ -70,3 +70,5 @@ cur.execute(twitter_table)
 
 cur.close()
 conn.close()
+
+print "elections database created"
