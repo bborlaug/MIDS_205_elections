@@ -115,10 +115,10 @@ while True:
         cur.close()
         conn.close()
         print 'waiting 30 sec...'
-        time.sleep(30) #Wait 30 sec to prevent exceeding limits
+        time.sleep(30) #Wait 30 sec to prevent exceeding Twitter Streaming limits
             
     ##Stop for 12 hrs 12 AM PST
-    ##Prevents making two many sentiment requests
+    ##Prevents making too many sentiment requests
     now_utc = datetime.now(timezone('UTC'))
     now_pacific = now_utc.astimezone(timezone('US/Pacific'))
     pacific_time = now_pacific.strftime(fmt)
