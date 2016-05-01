@@ -114,6 +114,8 @@ while True:
         cur.execute(insert_query)
         cur.close()
         conn.close()
+        print 'waiting 30 sec...'
+        time.sleep(30) #Wait 30 sec to prevent exceeding limits
             
     ##Stop for 12 hrs 12 AM PST
     ##Prevents making two many sentiment requests
