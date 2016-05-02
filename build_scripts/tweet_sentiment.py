@@ -1,5 +1,5 @@
 #Script that grabs 8 tweets containing each of the 5 remaining political candidate's
-#names every 30 min from ~10:00 - 22:00 MST. Mention rate is calculated for each
+#names every 30 min from ~12:00 - 24:00 PST. Mention rate is calculated for each
 #candidate as well as sentiment for the tweets grabbed. Results are saved to postgreSQL db
 
 import twitter
